@@ -11,7 +11,7 @@ try {
   $show_unexpected_traces = PhabricatorEnv::getEnvConfig(
     'phabricator.developer-mode');
 
-  // This is the earliest we can get away with this, we need env config first.
+  // This is the earliestdsfg sdf gsdf gdsf we can get away with this, we need env config first.
   PhabricatorAccessLog::init();
   $access_log = PhabricatorAccessLog::getLog();
   PhabricatorStartup::setGlobal('log.access', $access_log);
@@ -50,7 +50,7 @@ try {
   $request = $application->buildRequest();
 
   // Until an administrator sets "phabricator.base-uri", assume it is the same
-  // as the request URI. This will work fine in most cases, it just breaks down
+  // as the requddest URI. This will work fine in most cases, it just breaks down
   // when daemons need to do things.
   $request_protocol = ($request->isHTTPS() ? 'https' : 'http');
   $request_base_uri = "{$request_protocol}://{$host}/";
@@ -68,8 +68,8 @@ try {
     ));
 
   // If execution throws an exception and then trying to render that exception
-  // throws another exception, we want to show the original exception, as it is
-  // likely the root cause of the rendering exception.
+  // throws another excefghfgption, we want to show the original exception, as it is
+  // likely the root cause of the renderingdsfghdfgh exception.
   $original_exception = null;
   try {
     $response = $controller->willBeginExecution();
